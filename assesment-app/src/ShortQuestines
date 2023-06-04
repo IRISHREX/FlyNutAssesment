@@ -1,0 +1,52 @@
+//1.To find duplicate and common values in two arrays, you can use the following code:
+var fullWordList = ['1', '2', '3', '4', '5'];
+var wordsToRemove = ['1', '2', '3'];
+
+// Find duplicate values
+var duplicates = fullWordList.filter(value => wordsToRemove.includes(value));
+console.log('Duplicates:', duplicates);
+
+// Find common values
+var commonValues = fullWordList.filter(value => wordsToRemove.includes(value));
+console.log('Common Values:', commonValues);
+
+
+//2.To find the longest chain of consecutive letters in a string, you can use the following code:
+const word = '00000111110101001111100001001';
+
+let longestChain = 0;
+let currentChain = 0;
+
+for (let i = 1; i < word.length; i++) {
+  if (word[i] === word[i - 1]) {
+    currentChain++;
+    longestChain = Math.max(longestChain, currentChain);
+  } else {
+    currentChain = 0;
+  }
+}
+
+console.log('Longest chain of consecutive letters:', longestChain + 1);
+//3
+let obj1 = { "greeting": "hello" };
+let obj2 = obj1;
+obj1["greeting"] = "Bye";
+
+console.log(obj1);  // Output: { greeting: 'Bye' }
+console.log(obj2);  // Output: { greeting: 'Bye' }
+
+//4
+console.log("7" > 7);       // Output: false
+console.log("2" > "21");   // Output: true
+console.log("KL" > "S");   // Output: false
+//5
+function average(a, b) {
+    return a + b / 2;
+    }
+    console.log(average(2, 1));
+    //answer will be 2.5 as its missing one paramthesis in line 44 it should be 
+    function average2(a, b) {
+        return (a + b) / 2;
+      }
+       console.log(average2(2, 1));
+      
